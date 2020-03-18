@@ -53,7 +53,7 @@ app.use(
 );
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'BackEnd Popcorn';
 
 
 

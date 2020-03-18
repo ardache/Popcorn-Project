@@ -13,7 +13,7 @@ router.get('/answer/:id', (req, res, next) => {
     .catch(e=>console.log(e))
 });
 
-/* POST Answer by id. */
+/* POST Answer  */
 router.post('/answer', (req, res, next) => {
     const newAnswer = new Answer(req.body);
     newAnswer.save()
