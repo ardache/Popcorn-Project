@@ -5,7 +5,7 @@ const answerSchema = new Schema({
   long_answer: String,
   sort_answer: String,
   points: Number,
-  next_question: Number,
+  next_question: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
   next_answer: [Number]
 });
 
