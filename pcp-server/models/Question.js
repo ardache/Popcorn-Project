@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
-  ramo: String,
-  pregunta: String,
-  style: ['texto', 'opcion multiple', 'checklist', 'desplegable'],
+  branch: String,
+  question: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
+  kind: {
+    type: String,
+    enum: ['texto', 'opcion multiple', 'checklist', 'desplegable']
+    }
 });
 
 const Question = mongoose.model('Question', questionSchema);

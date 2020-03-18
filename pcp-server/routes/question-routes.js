@@ -12,5 +12,16 @@ router.get('/questions/:id', (req, res, next) => {
     .catch(e=>console.log(e))
 });
 
+/* POST Test */
+router.post('/questions', (req, res, next) => {
+  const newQuestion = new Question(req.body);
+  newQuestion.save()
+  .then(question=>{
+      res.status(200).json(question)
+  })
+  .catch(e=>console.log(e))
+});
+
+
 
 module.exports = router;
