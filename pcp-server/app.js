@@ -60,8 +60,10 @@ app.locals.title = 'BackEnd Popcorn';
 const index = require('./routes/index');
 const questionsRoutes = require('./routes/question-routes');
 const answerRoutes = require('./routes/answer-routes');
+const priceRoutes = require('./routes/price-routes');
 app.use('/', questionsRoutes);
 app.use('/', answerRoutes);
+app.use('/', priceRoutes);
 app.use('/', index);
 
 
