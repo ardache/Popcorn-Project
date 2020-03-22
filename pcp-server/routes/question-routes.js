@@ -3,7 +3,7 @@ const router  = express.Router();
 const Question = require('../models/Question');
 
 
-/* GET Question by id. */
+/* GET All Question */
 router.get('/questions', (req, res, next) => {
     Question.find()
     .then(questions=>{
