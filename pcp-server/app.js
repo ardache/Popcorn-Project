@@ -14,7 +14,7 @@ const cors         = require('cors');
 mongoose
   .connect('mongodb://localhost/pcp-server', {useNewUrlParser: true})
   .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    console.log(`::: All Set! Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
@@ -61,6 +61,8 @@ const index = require('./routes/index');
 const questionsRoutes = require('./routes/question-routes');
 const answerRoutes = require('./routes/answer-routes');
 const priceRoutes = require('./routes/price-routes');
+const branchRoutes = require('./routes/branch-routes');
+app.use('/', branchRoutes);
 app.use('/', questionsRoutes);
 app.use('/', answerRoutes);
 app.use('/', priceRoutes);
