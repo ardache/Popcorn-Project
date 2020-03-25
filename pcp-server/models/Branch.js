@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const branchSchema = new Schema({
   name: String,
   logo: String,
+  next_question: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
   available: Boolean,
 });
 

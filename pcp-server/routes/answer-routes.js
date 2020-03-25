@@ -6,9 +6,8 @@ const Answer = require('../models/Answer');
 /* GET Answer by id. */
 router.get('/answer/:id', (req, res, next) => {
   Answer.findById(req.params.id)
-    .populate('questions')
-    .then(test=>{
-        res.status(200).json(test)
+    .then(answer=>{
+        res.status(200).json(answer)
     })
     .catch(e=>console.log(e))
 });

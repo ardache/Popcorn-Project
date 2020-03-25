@@ -5,7 +5,7 @@ const Branch = require('../models/Branch');
 
 /* GET All Branch */
 router.get('/branch', (req, res, next) => {
-    Branch.find()
+    Branch.find({available:'true'})
     .then(branches=>{
         res.status(200).json({branches})
     })
