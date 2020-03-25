@@ -2,9 +2,7 @@
 ### Olvida todo lo que sabias sobre los seguros
 - - -
 
-## Descripcion
-- - -
-
+## Para empezar
 
 ### Dependencias
 - - -
