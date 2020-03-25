@@ -1,2 +1,7 @@
-# popcorn-project
-Plataforma de cotización y contratación de seguros en linea
+# popcorn
+### Olvida todo lo que sabias sobre los seguros
+- - -
+
+
+
+
