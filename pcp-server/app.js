@@ -12,7 +12,7 @@ const cors         = require('cors');
 
 
 mongoose
-  .connect('mongodb://localhost/pcp-server', {useNewUrlParser: true})
+  .connect(process.env.MONGO_ID, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
     console.log(`::: All Set! Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
