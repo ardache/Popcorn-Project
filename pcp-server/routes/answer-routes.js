@@ -3,13 +3,15 @@ const router  = express.Router();
 const Answer = require('../models/Answer');
 
 
-/* GET Answer by id. */
+/* GET Answer by parent */
 router.get('/answer/:id', (req, res, next) => {
-  Answer.findById(req.params.id)
-    .then(answer=>{
-        res.status(200).json(answer)
-    })
-    .catch(e=>console.log(e))
+
+        Answer.find({"parent":req.params.id})
+        .then(answers=>{
+            res.status(200).json({answers})
+        })
+        //.catch(e=>console.log(e))
+    
 });
 
 /* POST Answer  */

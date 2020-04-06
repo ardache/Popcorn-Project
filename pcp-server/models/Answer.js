@@ -5,8 +5,9 @@ const answerSchema = new Schema({
   long_answer: String,
   sort_answer: String,
   points: Number,
-  next_question: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
-  next_answer: [Number]
+  next_question: { type: Schema.Types.ObjectId, ref: 'Question' },
+  next_answer: [Number],
+  parent: { type: Schema.Types.ObjectId, ref: 'Question' },
 });
 
 const Answer = mongoose.model('Answer', answerSchema);
