@@ -21,6 +21,15 @@ router.get('/questions/:id', (req, res, next) => {
     .catch(e=>console.log(e))
 });
 
+/* GET Question by branch. */
+router.get('/questions/:branch', (req, res, next) => {
+    Question.find({"branch":req.params.branch})
+    .then(question=>{
+        res.status(200).json(question)
+    })
+    .catch(e=>console.log(e))
+});
+
 /* POST Test */
 router.post('/questions', (req, res, next) => {
   const newQuestion = new Question(req.body);
