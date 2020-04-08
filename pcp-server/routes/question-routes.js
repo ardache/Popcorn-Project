@@ -22,7 +22,7 @@ router.get('/questions/:id', (req, res, next) => {
 });
 
 /* GET Question by branch. */
-router.get('/questions/:branch', (req, res, next) => {
+router.get('/questionsbybranch/:branch', (req, res, next) => {
     Question.find({"branch":req.params.branch})
     .then(question=>{
         res.status(200).json(question)
