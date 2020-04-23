@@ -48,7 +48,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:5000'] // <== this will be the URL of our React app (it will be running on port 3000)
+    origin: [process.env.URL_CLIENT] // <== this will be the URL of our React app (it will be running on port 3000)
   })
 );
 
