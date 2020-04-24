@@ -61,7 +61,7 @@ app.use(
 );
 
 // default value for title local
-app.locals.title = 'BackEnd Popcorn';
+app.locals.title = 'BackEnd - Popcorn';
 
 
 
@@ -76,7 +76,7 @@ app.use('/', answerRoutes);
 app.use('/', priceRoutes);
 
 
-app.use((req, res, next) => {
+app.use(function(req, res, next) {
   // If no routes match, send them the React HTML.
   res.sendFile(__dirname + "/public/index.html");
 });
