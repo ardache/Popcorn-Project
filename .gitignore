@@ -8,3 +8,4 @@ npm-debug.log
 .env
 pcp-client/.DS_Store
 pcp-client/react-popcorn/
+.DS_Store
