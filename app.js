@@ -10,7 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 const cors         = require('cors');
 
-
+//now on netlify !!!!
 mongoose
   .connect(process.env.MONGO_ID, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
